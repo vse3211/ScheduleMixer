@@ -2,6 +2,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.FluentUI.AspNetCore.Components;
 using ScheduleMixer.Shared.Services;
 using ScheduleMixer.Services;
+using ScheduleMixer.Services.StorageProvider;
 
 namespace ScheduleMixer;
 
@@ -16,6 +17,10 @@ public static class MauiProgram
 
         // Add device-specific services used by the ScheduleMixer.Shared project
         builder.Services.AddSingleton<IFormFactor, FormFactor>();
+        
+        // Add storage path provider
+        builder.Services.AddSingleton<IStoragePathProvider, MauiStoragePathProvider>();
+
 
         builder.Services.AddMauiBlazorWebView();
         builder.Services.AddFluentUIComponents();

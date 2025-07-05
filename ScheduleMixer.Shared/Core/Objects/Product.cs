@@ -1,8 +1,8 @@
-﻿namespace ScheduleMixer.Core.Objects;
+﻿namespace ScheduleMixer.Shared.Core.Objects;
 
 public class Product(Product? baseProduct = null) : Base
 {
-    public Product BaseProduct { get; } = baseProduct is null ? default! :  baseProduct;
+    public Product? BaseProduct { get; } = baseProduct;
     private List<Ingredient> Ingredients { get; } = [];
 
     public List<Effect> Effects

@@ -1,0 +1,36 @@
+﻿@using Core.Objects
+@page "/EffectsEditor"
+<h3 @onclick="StateHasChanged">Effects Editor @(SelectedEffect is null ? "" : $"| {SelectedEffect.Name}")</h3>
+
+<FluentStack>
+    @if (Core.Data.IsReady)
+    {
+        <FluentListbox
+            TOption="Effect"
+            Label="Select effect"
+            Items="@Core.Data.Effects.Values"
+            Height="100vh"
+            OptionValue="@(x => x.Name)"
+            OptionText="@(x =>  $"{x.Name} ({x.Type})")"
+            @bind-Value="@SelectedEffectName"
+            @bind-SelectedOption="@SelectedEffect" />
+    
+        @if (SelectedEffect is not null)
+        {
+            <FluentListbox
+                TOption="EffectType"
+                Label="Select key"
+                Items="@SelectedEffect.Replacements.Keys"
+                Height="100vh"
+                OptionText="@(x =>  $"{x}")"
+                @bind-SelectedOption="@SelectedReplacementKey" />
+            <FluentListbox
+                TOption="EffectType"
+                Label="Select value"
+                Items="@SelectedEffect.Replacements.Values"
+                Height="100vh"
+                OptionText="@(x =>  $"{x}")"
+                @bind-SelectedOption="@SelectedReplacementValue" />
+        }
+    }
+</FluentStack>

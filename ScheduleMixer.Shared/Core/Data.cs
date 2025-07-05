@@ -1,11 +1,12 @@
 ﻿using System.Collections.Concurrent;
-using ScheduleMixer.Core.Objects;
-using Effect = ScheduleMixer.Core.Objects.Effect;
+using ScheduleMixer.Shared.Core.Objects;
+using Effect = ScheduleMixer.Shared.Core.Objects.Effect;
 
-namespace ScheduleMixer.Core;
+namespace ScheduleMixer.Shared.Core;
 
 public class Data
 {
+    public static bool IsReady => Effects.Count > 0;
     private static ConcurrentDictionary<EffectType, Effect>? _effects = null;
     public static ConcurrentDictionary<EffectType, Effect> Effects
     {

@@ -1,4 +1,4 @@
-﻿namespace ScheduleMixer.Core.Objects;
+﻿namespace ScheduleMixer.Shared.Core.Objects;
 
 public enum EffectType
 {
