@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleMixer", "ScheduleMixer\ScheduleMixer.csproj", "{E5DBC0BE-C2A9-4A0D-AE0F-979AC40612F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleMixer.Shared", "ScheduleMixer.Shared\ScheduleMixer.Shared.csproj", "{36EDD5BC-EC0A-4257-944A-E759F36B2D10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleMixer.Web", "ScheduleMixer.Web\ScheduleMixer.Web.csproj", "{1983D086-DB24-478C-A080-8B47C760803B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5DBC0BE-C2A9-4A0D-AE0F-979AC40612F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5DBC0BE-C2A9-4A0D-AE0F-979AC40612F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5DBC0BE-C2A9-4A0D-AE0F-979AC40612F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5DBC0BE-C2A9-4A0D-AE0F-979AC40612F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36EDD5BC-EC0A-4257-944A-E759F36B2D10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36EDD5BC-EC0A-4257-944A-E759F36B2D10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36EDD5BC-EC0A-4257-944A-E759F36B2D10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36EDD5BC-EC0A-4257-944A-E759F36B2D10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1983D086-DB24-478C-A080-8B47C760803B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1983D086-DB24-478C-A080-8B47C760803B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1983D086-DB24-478C-A080-8B47C760803B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1983D086-DB24-478C-A080-8B47C760803B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
