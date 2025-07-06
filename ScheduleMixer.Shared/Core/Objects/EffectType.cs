@@ -27,7 +27,7 @@ public enum EffectType
     Refreshing,
     Schizophrenic,
     Sedating,
-    SeizureInducing,
+    Seizure,
     Shrinking,
     Slippery,
     Smelly,

@@ -1,4 +1,6 @@
-﻿namespace ScheduleMixer.Shared.Core.Objects;
+﻿using System.Drawing;
+
+namespace ScheduleMixer.Shared.Core.Objects;
 
 public class Effect(EffectType type)
 {
@@ -48,4 +50,7 @@ public class Effect(EffectType type)
                 value.Select(x => $"{x.Key}={x.Value}"));
         }
     }
+    
+    public static EffectType GetTypeFromString(string type) => Enum.Parse<EffectType>(type, ignoreCase: true);
+    public static Effect GetEffectFromString(string type) => Core.Data.Effects[Enum.Parse<EffectType>(type, ignoreCase: true)];
 }

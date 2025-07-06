@@ -1,0 +1,19 @@
+﻿@page "/IngredientsJsonTestTool"
+<h3>Ingredients Json Test Tool</h3>
+
+@if (_ingredients is not null)
+{
+    var effects = Enum.GetValues(typeof(Core.Objects.EffectType)).Cast<Core.Objects.EffectType>().ToList();
+    @foreach (var ing in _ingredients)
+    {
+        <h3>@ing.Name</h3>
+        <p>@ing.BaseEffect | @effects.FindAll(x => string.Equals(x.ToString(), ing.BaseEffect, StringComparison.CurrentCultureIgnoreCase)).Count</p>
+        <ul>
+            @foreach (var eff in ing.Replacements)
+            {
+                <li>@eff.Key | @effects.FindAll(x => string.Equals(x.ToString(), eff.Key, StringComparison.CurrentCultureIgnoreCase)).Count -> 
+                    @eff.Value | @effects.FindAll(x => string.Equals(x.ToString(), eff.Value, StringComparison.CurrentCultureIgnoreCase)).Count</li>
+            }
+        </ul>
+    }
+}

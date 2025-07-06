@@ -4,6 +4,7 @@ using Effect = ScheduleMixer.Shared.Core.Objects.Effect;
 
 namespace ScheduleMixer.Shared.Core;
 
+// Static base app data
 public class Data
 {
     public static bool IsReady => Effects.Count > 0;
